@@ -7,7 +7,7 @@ import logo from "../public/copykittLogo.svg";
 const CopyKitt: React.FC = () => {
   const CHARACTER_LIMIT: number = 32;
   const ENDPOINT: string =
-    " https://8fnvynn133.execute-api.us-east-1.amazonaws.com/prod/generate_snippet_and_keyword";
+    "  https://8fnvynn133.execute-api.us-east-1.amazonaws.com/prod/generate_snippet_and_keyword";
   const [prompt, setPrompt] = React.useState("");
   const [snippet, setSnippet] = React.useState("");
   const [keywords, setKeywords] = React.useState([]);
