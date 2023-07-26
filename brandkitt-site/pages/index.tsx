@@ -12,7 +12,7 @@ const Home: NextPage = () => {
           name="description"
           content="Generate branding snippets for your product."
         />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/brand.jpg" />
       </Head>
 
       <CopyKitt />
