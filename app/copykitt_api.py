@@ -3,11 +3,25 @@ from copykitt import generate_branding_snippet, generate_keyword_snippet
 from mangum import Mangum
 
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 
 MAX_INPUT_LENGTH = 32
 
 app = FastAPI()
 handler = Mangum(app)
+
+origins = [
+    "http://localhost",
+    "http://localhost:3000",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 @app.get("/generate_snippet")
 def generate_branding_snippet_api(prompt:str):
